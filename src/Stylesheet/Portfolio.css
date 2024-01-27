@@ -1,0 +1,111 @@
+/* Portfolio.css */
+
+.portfolio-page {
+    padding: 50px 0;
+    background: #f8f8f8;
+    color: #fff;
+  }
+  
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .portfolio-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    animation: bounceUpDown 1s ease-in-out infinite;
+    width: 100%;
+  }
+  
+  @keyframes bounceUpDown {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  .portfolio-item {
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease;
+    width: 300px; /* Set a fixed width for each card */
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .portfolio-item-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .portfolio-item-title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .portfolio-item-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .github-link {
+    display: block;
+    margin-top: 15px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .github-link:hover {
+    color: #00796b;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 768px) {
+    .portfolio-title {
+      font-size: 2rem;
+    }
+  
+    .portfolio-item {
+      width: 100%;
+    }
+  }
+  
