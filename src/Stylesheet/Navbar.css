@@ -1,0 +1,85 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+.navbar-brand {
+  flex: 1;
+}
+.navbar-brand img{
+  width: 150px;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 30px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+
+.navbar-links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex: 2;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+
+
+.navbar-links a:hover {
+  color: #00bcd4;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+  }
+  
+  
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #555;
+  }
+
+  .navbar-toggle{
+    display: block;
+  }
+}

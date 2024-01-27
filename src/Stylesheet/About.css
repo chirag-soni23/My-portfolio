@@ -1,0 +1,54 @@
+/* About.css */
+.about-section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 40px;
+  }
+  
+  .text-content {
+    flex-grow: 1;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .animated-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
