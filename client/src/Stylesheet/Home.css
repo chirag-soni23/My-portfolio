@@ -158,10 +158,16 @@
 }
 
 .additional-content .skills-bar-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   flex: 1;
   margin-right: 10px;
 }
 
+.additional-content .skills-bar-label img{
+  width: 30px;
+}
 .additional-content .skills-bar-progress {
   flex: 2;
   height: 15px;

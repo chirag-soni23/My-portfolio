@@ -5,12 +5,12 @@ import "../Stylesheet/Home.css";
 const Home = () => {
   const [resumeFile, setResumeFile] = useState(null);
   const [skills, setSkills] = useState([
-    { name: "HTML", percentage: 90 },
-    { name: "CSS", percentage: 90 },
-    { name: "JavaScript", percentage: 85 },
-    { name: "React", percentage: 80 },
-    { name: "Express.js", percentage: 70 },
-    // Add more skills as needed
+    { name: "HTML", percentage: 90 , logo:"https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" },
+    { name: "CSS", percentage: 90 , logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" },
+    { name: "JavaScript", percentage: 85 , logo:"https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+    { name: "React", percentage: 80  , logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"},
+    { name: "Express.js", percentage: 70 , logo:"https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" },
+    { name: "Mongo db", percentage: 70 , logo:"https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" },
   ]);
 
   const handleFileChange = (e) => {
@@ -55,11 +55,11 @@ const Home = () => {
         </div>
       </section>
       <div className="additional-content">
-            <h2>My Skills</h2>
+            <h2>My Skills </h2>
         <div className="skills-container">
           {skills.map((skill, index) => (
             <div className="skills-bar" key={index}>
-              <div className="skills-bar-label">{skill.name} </div>
+              <div className="skills-bar-label">{skill.name} <img src={skill.logo} alt="" /> </div>
          
               <div className="skills-bar-progress">
                 <div
