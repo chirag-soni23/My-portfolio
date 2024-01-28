@@ -39,7 +39,7 @@ app.post('/api/contact', async (req, res) => {
     res.status(201).json({ message: 'Message sent successfully' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Internal server error' });
+    res.status(500).json({ message: 'Failed to sent message' });
   }
 });
 
