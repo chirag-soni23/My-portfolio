@@ -2,6 +2,7 @@ import React from "react";
 import "../Stylesheet/Portfolio.css";
 import EcommerceImg from "../assets/ProjectsImage/Ecommerce.png";
 import bookingImg from "../assets/ProjectsImage/booking.png";
+import foodImg from '../assets/ProjectsImage/food.png'
 
 const Portfolio = () => {
   const projects = [
@@ -18,6 +19,13 @@ const Portfolio = () => {
         "This hotel booking platform is developed using the MERN (MongoDB, Express.js, React, Node.js) stack, offering a seamless user experience with real-time data storage, server-side logic, and a dynamic React-based frontend for efficient hotel reservations.",
       imageUrl: bookingImg,
       githubLink: "https://github.com/chirag-soni23/booking-app",
+    },
+    {
+      name: "Project 3",
+      description:
+        "A React-based food search app that allows users to discover and explore various food items. Utilizing Axios for seamless API integration, the app provides real-time search suggestions, detailed information about each food item, and ensures a responsive design for a smooth user experience.",
+      imageUrl: foodImg,
+      githubLink: "https://github.com/chirag-soni23/food-search-app",
     },
     // Add more projects as needed
   ];
