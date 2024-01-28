@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to={"/contact"}>Contact</Link>
         </div>
         <div className="navbar-toggle" onClick={toggleNavbar}>
-          {isOpen? <i className="fa-solid fa-xmark" style={{color:'white'}}></i>:  <div className={`menu-icon `}>
+          {isOpen? <i className="fa-solid fa-xmark" style={{color:'white'}}></i>:  <div className='menu-icon'>
           <i className="fa-solid fa-bars" style={{color:"white"}}></i>
           </div>}
         
