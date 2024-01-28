@@ -1,4 +1,4 @@
-.home-section {
+ .home-section {
     position: relative;
     background-color: #222;
     color: #fff;
@@ -104,4 +104,7 @@
   
   .project-description {
     font-size: 1rem;
-  }
+  } 
+
+
+ 
