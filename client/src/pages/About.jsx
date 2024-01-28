@@ -22,9 +22,7 @@ const About = () => {
               </p>
             </div>
           </div>
-
-        
-        <div className="education-section">
+          <div className="education-section">
             <h2 className="education-title">Education</h2>
             <div className="education-details">
               <div className="education-item">
@@ -44,7 +42,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </section>
     </>
   );
