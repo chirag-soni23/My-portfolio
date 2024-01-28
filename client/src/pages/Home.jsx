@@ -4,6 +4,12 @@ import "../Stylesheet/Home.css";
 
 const Home = () => {
   const [resumeFile, setResumeFile] = useState(null);
+  const [skills, setSkills] = useState([
+    { name: "HTML", percentage: 90 },
+    { name: "CSS", percentage: 80 },
+    { name: "JavaScript", percentage: 75 },
+    // Add more skills as needed
+  ]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -46,15 +52,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <div className="additional-content">
         <h2>My Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          {/* Add more skills as needed */}
-        </ul>
+        <div className="skills-container">
+          {skills.map((skill, index) => (
+            <div className="skills-bar" key={index}>
+              <div className="skills-bar-label">{skill.name}</div>
+              <div className="skills-bar-progress">
+                <div
+                  className="skills-bar-fill"
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="additional-content">
