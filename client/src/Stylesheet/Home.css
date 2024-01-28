@@ -190,6 +190,10 @@
 @media only screen and (max-width: 768px) {
   .additional-content .skills-bar {
     flex-direction: column;
+    gap: 10px;
+  }
+  .additional-content .skills-bar-progress{
+    width: 80%;
   }
 }
 
