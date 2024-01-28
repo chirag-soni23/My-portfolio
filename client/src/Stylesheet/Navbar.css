@@ -1,27 +1,38 @@
-/* Navbar.css */
-
 .navbar {
   background-color: #333;
-  padding: 15px 0;
+  padding: 15px 15px;
   position: sticky;
-  z-index: 999;
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 0 20px;
 }
 
 .navbar-brand {
-  flex: 1;
+  display: flex;
+  align-items: center;
 }
-.navbar-brand img{
+
+.navbar-brand img {
   width: 150px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .navbar-toggle {
@@ -29,62 +40,32 @@
   display: none;
 }
 
-.navbar-toggle .bar {
-  width: 25px;
-  height: 30px;
-  background-color: #fff;
-  margin: 5px 0;
+.fa-solid {
+  font-size: 30px;
 }
 
-
-.navbar-links {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex: 2;
-}
-
-.navbar-links a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-
-
-.navbar-links a:hover {
-  color: #00bcd4;
-}
-
-/* Responsive styles */
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 640px) {
   .navbar-links {
     display: none;
     flex-direction: column;
+    text-align: center;
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 0;
     width: 100%;
     background-color: #333;
     z-index: 1;
   }
-  
-  
 
   .navbar-links.active {
     display: flex;
   }
 
   .navbar-links a {
-    text-align: center;
-    width: 100%;
-    padding: 15px 0;
-    border-bottom: 1px solid #555;
+    margin: 10px 0;
   }
 
-  .navbar-toggle{
+  .navbar-toggle {
     display: block;
   }
 }

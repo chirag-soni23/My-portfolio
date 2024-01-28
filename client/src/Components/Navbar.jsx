@@ -1,3 +1,5 @@
+// Navbar.js
+
 import React, { useState } from 'react';
 import '../Stylesheet/Navbar.css';
 import { Link } from 'react-router-dom';
@@ -22,9 +24,10 @@ const Navbar = () => {
           <Link to={"/contact"}>Contact</Link>
         </div>
         <div className="navbar-toggle" onClick={toggleNavbar}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          {isOpen? <i className="fa-solid fa-xmark" style={{color:'white'}}></i>:  <div className={`menu-icon `}>
+          <i className="fa-solid fa-bars" style={{color:"white"}}></i>
+          </div>}
+        
         </div>
       </div>
     </nav>
@@ -32,4 +35,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
