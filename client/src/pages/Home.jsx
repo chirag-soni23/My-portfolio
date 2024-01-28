@@ -6,8 +6,10 @@ const Home = () => {
   const [resumeFile, setResumeFile] = useState(null);
   const [skills, setSkills] = useState([
     { name: "HTML", percentage: 90 },
-    { name: "CSS", percentage: 80 },
-    { name: "JavaScript", percentage: 75 },
+    { name: "CSS", percentage: 90 },
+    { name: "JavaScript", percentage: 85 },
+    { name: "React", percentage: 80 },
+    { name: "Express.js", percentage: 70 },
     // Add more skills as needed
   ]);
 
@@ -57,7 +59,8 @@ const Home = () => {
         <div className="skills-container">
           {skills.map((skill, index) => (
             <div className="skills-bar" key={index}>
-              <div className="skills-bar-label">{skill.name}</div>
+              <div className="skills-bar-label">{skill.name} </div>
+         
               <div className="skills-bar-progress">
                 <div
                   className="skills-bar-fill"
