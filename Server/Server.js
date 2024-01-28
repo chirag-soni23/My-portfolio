@@ -1,39 +1,39 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/my-portfolio', {
+app.use(cors())
+
+// Mongodb connection
+mongoose.connect('mongodb://127.0.0.1:27017/my-portfolio', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-// Create a Mongoose schema
+// Create schema
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
 });
 
-// Create a Mongoose model
+// Create mongoose model
 const Contact = mongoose.model('Contact', contactSchema);
 
-// Middleware to parse JSON
+
 app.use(bodyParser.json());
 
-// Route to handle form submission
+
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    // Create a new contact instance
     const newContact = new Contact({ name, email, message });
 
-    // Save the contact to the database
     await newContact.save();
 
     res.status(201).json({ message: 'Message sent successfully' });

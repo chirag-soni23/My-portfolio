@@ -1,4 +1,3 @@
-// About.jsx
 import React from 'react';
 import '../Stylesheet/About.css'; 
 import ProfileImage from '../assets/ProfileImage/Chirag.jpg'

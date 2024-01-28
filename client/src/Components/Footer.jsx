@@ -1,5 +1,3 @@
-// Footer.js
-
 import React from 'react';
 import '../Stylesheet/Footer.css';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';

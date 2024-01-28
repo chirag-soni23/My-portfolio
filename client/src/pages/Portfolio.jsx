@@ -1,5 +1,3 @@
-// Portfolio.js
-
 import React from "react";
 import "../Stylesheet/Portfolio.css";
 import EcommerceImg from "../assets/ProjectsImage/Ecommerce.png";
