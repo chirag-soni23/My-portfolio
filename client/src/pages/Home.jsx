@@ -43,7 +43,7 @@ const Home = () => {
               className="file-input"
             />
             <button onClick={handleDownloadResume} className="download-btn">
-              Download Resume
+              Get Resume
             </button>
           </div>
         </div>

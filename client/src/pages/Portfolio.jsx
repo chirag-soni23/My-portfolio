@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-page">
       <div className="portfolio-container">
-        <h1 className="portfolio-title">My Portfolio</h1>
+        <h1 className="portfolio-title">My Projects</h1>
         {projects.map((project, index) => (
           <div className="portfolio-item" key={index}>
             <img

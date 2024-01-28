@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
           <Link to={"/"}>Home</Link>
           <Link to={"/about"}>About</Link>
-          <Link to={"/portfolio"}>Portfolio</Link>
+          <Link to={"/portfolio"}>Projects</Link>
           <Link to={"/contact"}>Contact</Link>
         </div>
         <div className="navbar-toggle" onClick={toggleNavbar}>
