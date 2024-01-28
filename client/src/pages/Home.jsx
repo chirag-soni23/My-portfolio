@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </section>
       <div className="additional-content">
-        <h2>My Skills</h2>
+            <h2>My Skills</h2>
         <div className="skills-container">
           {skills.map((skill, index) => (
             <div className="skills-bar" key={index}>
@@ -62,7 +62,7 @@ const Home = () => {
                 <div
                   className="skills-bar-fill"
                   style={{ width: `${skill.percentage}%` }}
-                ></div>
+                >{skill.percentage} %</div>
               </div>
             </div>
           ))}

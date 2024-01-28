@@ -172,6 +172,8 @@
 
 .additional-content .skills-bar-fill {
   height: 100%;
+  padding-left: 20px;
+  color: #ffffff;
   width: 0;
   background-color: #4caf50;
   border-radius: 8px;
@@ -191,7 +193,7 @@
     width: 0;
   }
   to {
-    width: 90%; /* Change the percentage as needed */
+    width: 100%;
   }
 }
 
