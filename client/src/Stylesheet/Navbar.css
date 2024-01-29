@@ -36,6 +36,11 @@
   margin-right: 20px;
 }
 
+.navbar-links a:hover{
+  color: #00bcd4;
+
+}
+
 .navbar-toggle {
   cursor: pointer;
   display: none;
