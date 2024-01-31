@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import '../Stylesheet/Contact.css';
-import swal from 'sweetalert'
+import React, { useState } from "react";
+import "../Stylesheet/Contact.css";
+import swal from "sweetalert";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,26 +18,29 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3001/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        swal("Success Message Title", "Message Successfully Sent", "success")
-        setFormData({ name: '', email: '', message: '' });
+        swal("Success Message Title", "Message Successfully Sent", "success");
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        swal('Oops!', 'Failed to Send message', 'error');
+        swal("Oops!", "Failed to Send message", "error");
       }
     } catch (error) {
-
-      swal('Oops!', 'Failed to Send message', 'error');
-      setFormData({ name: '', email: '', message: '' });
-      console.error('Error:', error);
+      swal("Oops!", "Failed to Send message", "error");
+      setFormData({ name: "", email: "", message: "" });
+      console.error("Error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -44,9 +49,6 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-content">
           <h2 className="contact-title">Contact Me</h2>
-          <p className="contact-description">
-           
-          </p>
           <form className="contact-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Your Name:</label>
             <input
@@ -77,7 +79,9 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
           </form>
         </div>
       </div>
