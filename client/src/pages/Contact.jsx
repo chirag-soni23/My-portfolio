@@ -32,6 +32,9 @@ const Contact = () => {
         swal('Oops!', 'Failed to Send message', 'error');
       }
     } catch (error) {
+
+      swal('Oops!', 'Failed to Send message', 'error');
+      setFormData({ name: '', email: '', message: '' });
       console.error('Error:', error);
     }
   };
