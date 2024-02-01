@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../Stylesheet/Portfolio.css";
+import "../Stylesheet/Projects.css";
 
 import { project } from "../Components/Constant";
 
-const Portfolio = () => {
+const Projects = () => {
   const [projects,setProjects] = useState(project)
   return (
     <div className="portfolio-page">
@@ -37,4 +37,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;
