@@ -48,7 +48,7 @@ export const project = [
     description:
       "This hotel booking platform is developed using the MERN (MongoDB, Express.js, React, Node.js) stack, offering a seamless user experience with real-time data storage, server-side logic, and a dynamic React-based frontend for efficient hotel reservations.",
     imageUrl: bookingImg,
-    githubLink: "https://github.com/chirag-soni23/booking-app",
+    githubLink: "https://github.com/chirag-soni23/hotel-booking-app",
   },
   {
     name: "Food search app",
