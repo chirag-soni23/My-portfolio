@@ -1,15 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
+require('dotenv').config(); // Load environment variables from .env
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors())
+app.use(cors());
 
 // Mongodb connection
-mongoose.connect('mongodb://127.0.0.1:27017/my-portfolio', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -24,22 +25,19 @@ const contactSchema = new mongoose.Schema({
 // Create mongoose model
 const Contact = mongoose.model('Contact', contactSchema);
 
-
 app.use(bodyParser.json());
-
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
     const newContact = new Contact({ name, email, message });
-
     await newContact.save();
 
     res.status(201).json({ message: 'Message sent successfully' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Failed to sent message' });
+    res.status(500).json({ message: 'Failed to send message' });
   }
 });
 
