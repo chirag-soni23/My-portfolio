@@ -7,6 +7,12 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3001;
 
+// static files
+app.use(express.static(path.join(__dirname,'./client/dist')))
+app.get("*",(req,res)=>{
+  res.sendFile(path.join(__dirname,"./client/dist/index.html"))
+})
+
 app.use(cors());
 
 // Mongodb connection
