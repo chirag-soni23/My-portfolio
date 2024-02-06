@@ -40,6 +40,7 @@ const About = () => {
               </div>
               {/* Add more education items as needed */}
             </div>
+            
           </div>
         </div>
       </section>
