@@ -2,6 +2,7 @@ import EcommerceImg from "../assets/ProjectsImage/Ecommerce.png";
 import bookingImg from "../assets/ProjectsImage/booking.png";
 import foodImg from "../assets/ProjectsImage/food.png";
 import bubbleImg from "../assets/ProjectsImage/bubble.png"
+import stopWatchImg from "../assets/ProjectsImage/stopWatch.png"
 // my Skills
 export const mySkills = [
   {
@@ -64,5 +65,12 @@ export const project = [
       "Embark on a bubble-popping adventure with this JavaScript-powered game. Simple yet captivating, it creates a world of bubbles that await your touch. The ticking timer adds a sense of urgency, making each pop count in this quick and fun challenge.",
     imageUrl: bubbleImg,
     githubLink: "https://github.com/chirag-soni23/Bubble-game",
+  },
+  {
+    name: "Stopwatch",
+    description:
+      "An interactive stopwatch created using HTML, CSS, and JavaScript, allowing users to start, stop, and reset the timer. The HTML structure provides the layout, CSS styles enhance the visual appearance, and JavaScript handles the functionality, including time tracking and button interactions.",
+    imageUrl: stopWatchImg,
+    githubLink: "https://github.com/chirag-soni23/StopWatch",
   },
 ];
