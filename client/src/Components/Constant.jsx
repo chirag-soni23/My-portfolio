@@ -3,6 +3,7 @@ import bookingImg from "../assets/ProjectsImage/booking.png";
 import foodImg from "../assets/ProjectsImage/food.png";
 import bubbleImg from "../assets/ProjectsImage/bubble.png"
 import stopWatchImg from "../assets/ProjectsImage/stopWatch.png"
+import drumImg from "../assets/ProjectsImage/drum.png"
 // my Skills
 export const mySkills = [
   {
@@ -72,5 +73,12 @@ export const project = [
       "An interactive stopwatch created using HTML, CSS, and JavaScript, allowing users to start, stop, and reset the timer. The HTML structure provides the layout, CSS styles enhance the visual appearance, and JavaScript handles the functionality, including time tracking and button interactions.",
     imageUrl: stopWatchImg,
     githubLink: "https://github.com/chirag-soni23/StopWatch",
+  },
+  {
+    name: "Drum kit",
+    description:
+      "Drum kit is a dynamic web application utilizing HTML, CSS, and JavaScript, allowing users to simulate drumming by triggering sounds with keyboard presses. Its intuitive design and responsive layout provide an immersive drumming experience across different devices, offering customizable rhythms and interactive feedback.",
+    imageUrl: drumImg,
+    githubLink: "https://github.com/chirag-soni23/Drum-kit",
   },
 ];
