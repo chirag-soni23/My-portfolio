@@ -4,6 +4,7 @@ import foodImg from "../assets/ProjectsImage/food.png";
 import bubbleImg from "../assets/ProjectsImage/bubble.png"
 import stopWatchImg from "../assets/ProjectsImage/stopWatch.png"
 import drumImg from "../assets/ProjectsImage/drum.png"
+import weatherImg from "../assets/ProjectsImage/weather.png"
 // my Skills
 export const mySkills = [
   {
@@ -80,5 +81,12 @@ export const project = [
       "Drum kit is a dynamic web application utilizing HTML, CSS, and JavaScript, allowing users to simulate drumming by triggering sounds with keyboard presses. Its intuitive design and responsive layout provide an immersive drumming experience across different devices, offering customizable rhythms and interactive feedback.",
     imageUrl: drumImg,
     githubLink: "https://github.com/chirag-soni23/Drum-kit",
+  },
+  {
+    name: "Weather App",
+    description:
+      "This weather app utilizes HTML, CSS, and JavaScript to provide users with real-time weather information for a specified city. Users simply need to input the name of the city they want to check and click the search button. Upon clicking, the app fetches the current weather data for the entered city and displays it to the user, offering a seamless and convenient way to stay updated on weather conditions worldwide.",
+    imageUrl: weatherImg,
+    githubLink: "https://github.com/chirag-soni23/Weather-app",
   },
 ];
