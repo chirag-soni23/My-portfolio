@@ -17,14 +17,16 @@ const Projects = () => {
       <div className="portfolio-container">
         <h1 className="portfolio-title">My Projects</h1>
         <input
-        className="input"
+          className="input"
           type="text"
           placeholder="Search projects..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         {filteredProjects.length === 0 ? (
-          <p key="no-project" ><Nothing/></p>
+          <p key="no-project">
+            <Nothing />
+          </p>
         ) : (
           filteredProjects.map((project, index) => (
             <div className="portfolio-item" key={index}>
