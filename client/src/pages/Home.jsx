@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import swal from "sweetalert";
 import "../Stylesheet/Home.css";
 import { mySkills } from "../Components/Constant";
+import { project } from "../Components/Constant";
 
 const Home = () => {
   const [resumeFile, setResumeFile] = useState(null);
@@ -72,35 +73,14 @@ const Home = () => {
 
       <div className="additional-content">
         <h2>Projects</h2>
-        <div className="project">
-          <h3>E-commerce website</h3>
+        {project.map((project,index)=>{
+          return  <div key={index} className="project">
+          <h3>{project.name}</h3>
           <p>
-            This e-commerce website is built using React and Firebase,
-            incorporating modular UI components, Firebase Realtime Database,
-            Authentication, and Cloud Functions. It features a responsive design
-            and secure payment integration.
+           {project.description}
           </p>
         </div>
-        <div className="project">
-          <h3>Hotel Booking </h3>
-          <p>
-            This hotel booking platform is developed using the MERN (MongoDB,
-            Express.js, React, Node.js) stack, offering a seamless user
-            experience with real-time data storage, server-side logic, and a
-            dynamic React-based frontend for efficient hotel reservations.
-          </p>
-        </div>
-        <div className="project">
-          <h3>Food search app </h3>
-          <p>
-            A React-based food search app that allows users to discover and
-            explore various food items. Utilizing Axios for seamless API
-            integration, the app provides real-time search suggestions, detailed
-            information about each food item, and ensures a responsive design
-            for a smooth user experience.
-          </p>
-        </div>
-        {/* Add more projects as needed */}
+        })}
       </div>
     </div>
   );
