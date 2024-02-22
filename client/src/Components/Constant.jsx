@@ -1,10 +1,10 @@
 import EcommerceImg from "../assets/ProjectsImage/Ecommerce.png";
 import bookingImg from "../assets/ProjectsImage/booking.png";
 import foodImg from "../assets/ProjectsImage/food.png";
-import bubbleImg from "../assets/ProjectsImage/bubble.png"
-import stopWatchImg from "../assets/ProjectsImage/stopWatch.png"
-import drumImg from "../assets/ProjectsImage/drum.png"
-import weatherImg from "../assets/ProjectsImage/weather.png"
+import bubbleImg from "../assets/ProjectsImage/bubble.png";
+import stopWatchImg from "../assets/ProjectsImage/stopWatch.png";
+import drumImg from "../assets/ProjectsImage/drum.png";
+import weatherImg from "../assets/ProjectsImage/weather.png";
 // my Skills
 export const mySkills = [
   {
