@@ -78,7 +78,6 @@ const Contact = () => {
               onChange={handleChange}
               required
             ></textarea>
-
             <button type="submit" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
