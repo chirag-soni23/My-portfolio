@@ -54,6 +54,10 @@
     border: 1px solid #ddd;
     border-radius: 5px;
   }
+
+  textarea{
+    resize: none;
+  }
   
   button {
     background-color: #00bcd4;
