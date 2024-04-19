@@ -1,30 +1,18 @@
 import React, { useState } from "react";
-import swal from "sweetalert";
 import "../Stylesheet/Home.css";
 import { mySkills } from "../Components/Constant";
 import { project } from "../Components/Constant";
+import ResumePDF from "../resume/Resume.pdf"; 
 
 const Home = () => {
-  const [resumeFile, setResumeFile] = useState(null);
   const [skills, setSkills] = useState(mySkills);
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setResumeFile(file);
-  };
-
   const handleDownloadResume = () => {
-    if (resumeFile) {
-      const fileUrl = URL.createObjectURL(resumeFile);
-      const link = document.createElement("a");
-      link.href = fileUrl;
-      link.download = "resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      swal("Oops!", "Please select a file before downloading.", "error");
-    }
+    const link = document.createElement("a");
+    link.href = ResumePDF; 
+    link.download = "Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -37,12 +25,6 @@ const Home = () => {
               I am a passionate Frontend developer dedicated to creating
               innovative and user-friendly websites.
             </p>
-
-            <input
-              type="file"
-              onChange={handleFileChange}
-              className="file-input"
-            />
             <button onClick={handleDownloadResume} className="download-btn">
               Get Resume
             </button>
@@ -73,13 +55,13 @@ const Home = () => {
 
       <div className="additional-content">
         <h2>Projects</h2>
-        {project.map((project,index)=>{
-          return  <div key={index} className="project">
-          <h3>{project.name}</h3>
-          <p>
-           {project.description}
-          </p>
-        </div>
+        {project.map((project, index) => {
+          return (
+            <div key={index} className="project">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
+          );
         })}
       </div>
     </div>
