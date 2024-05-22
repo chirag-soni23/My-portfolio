@@ -11,16 +11,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // static file
-app.use(express.static(path.join(__dirname,'../client/dist')))
-app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'../client/dist/index.html'))
-})
+// app.use(express.static(path.join(__dirname,'../client/dist')))
+// app.get('*',(req,res)=>{
+//   res.sendFile(path.join(__dirname,'../client/dist/index.html'))
+// })
 
 // Mongodb connection
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGO_URL);
 
 // Create schema
 const contactSchema = new mongoose.Schema({
