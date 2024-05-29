@@ -74,7 +74,13 @@
   }
   @media (max-width: 640px){
     .contact-section {
-      padding: 10px;
+      padding: 25px;
+    }
+
+  }
+  @media (max-width: 850px){
+    .contact-section {
+      padding: 25px;
     }
 
   }

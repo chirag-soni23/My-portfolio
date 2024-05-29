@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Stylesheet/Navbar.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ const Navbar = () => {
         <div className="navbar-brand">
           <Link to={"/"} className="logo">
             <img
-              src="https://www.pikpng.com/pngl/b/501-5014867_portfolio-logo-png-portfolio-png-clipart.png"
-              alt=""
+              src={logo}
+              alt="code&craft"
             />
           </Link>
         </div>
