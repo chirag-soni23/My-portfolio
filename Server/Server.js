@@ -11,7 +11,11 @@ app.use(bodyParser.json());
 
 
 // Mongodb connection
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGO_URL).then(()=>{
+  console.log("Mongodb connected successfully");
+}).catch(()=>{
+  console.log("Failed Connection")
+})
 
 // Create schema
 const contactSchema = new mongoose.Schema({
