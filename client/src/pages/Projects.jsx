@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ReactTyped } from "react-typed";
 import "../Stylesheet/Projects.css";
 
 import { project } from "../Components/Constant";
@@ -15,7 +16,9 @@ const Projects = () => {
   return (
     <div className="portfolio-page">
       <div className="portfolio-container">
-        <h1 className="portfolio-title">My Projects</h1>
+        <h1 className="portfolio-title">
+        <ReactTyped strings={["My Projects","My Projects"]} typeSpeed={100} backSpeed={50} loop={true} />
+        </h1>
         <input
           className="input"
           type="text"

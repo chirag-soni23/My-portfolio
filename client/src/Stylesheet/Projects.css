@@ -17,7 +17,7 @@
     margin-bottom: 30px;
     text-align: center;
     color: #333;
-    animation: bounceUpDown 1s ease-in-out infinite;
+    /* animation: bounceUpDown 1s ease-in-out infinite; */
     width: 100%;
   }
   .input{
