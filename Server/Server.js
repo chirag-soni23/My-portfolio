@@ -45,6 +45,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// GET Method
+app.get("/",(req,res)=>{
+  res.send("Hello");
+})
+
 // POST endpoint to handle form submission
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
