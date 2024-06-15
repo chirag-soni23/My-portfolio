@@ -14,7 +14,6 @@ const port = process.env.PORT || 3001;
 app.use(cors({
   origin:["https://my-portfolio-frontend-three.vercel.app"],
   methods:["POST","GET"],
-  credentials:true
 }));
 app.use(bodyParser.json());
 
