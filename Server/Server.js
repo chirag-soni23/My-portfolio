@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin:["https://my-portfolio-frontend-three.vercel.app/"],
+  origin:["https://my-portfolio-frontend-three.vercel.app"],
   methods:["POST"."GET"],
   credentials:true
 }));
