@@ -11,10 +11,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors({
-  origin:["https://my-portfolio-frontend-three.vercel.app/"],
-  methods:["POST","GET"],
-}));
+app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
