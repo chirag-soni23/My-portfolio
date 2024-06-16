@@ -3,8 +3,8 @@ import "../Stylesheet/Home.css";
 import { mySkills } from "../Components/Constant";
 import { project } from "../Components/Constant";
 import ResumePDF from "../resume/Resume.pdf"; 
-
 const Home = () => {
+
   const [skills, setSkills] = useState(mySkills);
   const handleDownloadResume = () => {
     const link = document.createElement("a");
