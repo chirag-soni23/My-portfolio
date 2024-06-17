@@ -1,14 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Stylesheet/Home.css";
-import { mySkills } from "../Components/Constant";
-import { project } from "../Components/Constant";
-import ResumePDF from "../resume/Resume.pdf"; 
-const Home = () => {
+import { mySkills, project } from "../Components/Constant";
+import ResumePDF from "../resume/Resume.pdf";
 
+gsap.registerPlugin(ScrollTrigger);
+
+const Home = () => {
   const [skills, setSkills] = useState(mySkills);
+  const skillsContainerRef = useRef(null);
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const skillsBars = document.querySelectorAll(".skills-bar");
+
+    skillsBars.forEach((bar) => {
+      gsap.fromTo(
+        bar,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: bar,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    // Animate the title
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 1, x: 0 },
+        {
+          opacity: 0,
+          x: -300,
+          duration: 1,
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 20%",
+            end: "bottom 50%",
+            markers:true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+  }, []);
+
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = ResumePDF; 
+    link.href = ResumePDF;
     link.download = "Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -20,7 +68,9 @@ const Home = () => {
       <section className="home-section">
         <div className="home-container">
           <div className="home-content animated-fade-in">
-            <h1 className="home-title">Welcome to My Portfolio</h1>
+            <h1 className="home-title" ref={titleRef}>
+              Welcome to My Portfolio
+            </h1>
             <p className="home-description">
               I am a passionate Frontend developer dedicated to creating
               innovative and user-friendly websites.
@@ -32,12 +82,12 @@ const Home = () => {
         </div>
       </section>
       <div className="additional-content">
-        <h2>My Skills </h2>
-        <div className="skills-container">
+        <h2>My Skills</h2>
+        <div className="skills-container" ref={skillsContainerRef}>
           {skills.map((skill, index) => (
             <div className="skills-bar" key={index}>
               <div className="skills-bar-label">
-                {skill.name} <img src={skill.logo} alt="" />{" "}
+                {skill.name} <img src={skill.logo} alt="" />
               </div>
 
               <div className="skills-bar-progress">
