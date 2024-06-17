@@ -30,7 +30,8 @@
     font-size: 2.5rem;
     color: #333;
   }
-  
+
+ 
   .about-description {
     font-size: 1.2rem;
     color: #555;
@@ -60,14 +61,19 @@
   .education-title {
     font-size: 1.5rem;
     color: #333;
-    text-align: start;
+    text-align: center;
   }
   
   .education-details {
-    display: flex;
-    flex-wrap: wrap; 
     margin-top: 10px;
   }
+  .card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
   
   .education-item {
     flex: 0 0 48%;
