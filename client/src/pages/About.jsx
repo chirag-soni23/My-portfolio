@@ -24,6 +24,22 @@ const About = () => {
           </div>
           <div className="education-section">
             <h2 className="education-title">Education</h2>
+            <div className=" education-details">
+              <div className="education-item">
+                <h3 className="education-degree">
+                  Senior Secondary (12th Grade)
+                </h3>
+                <p className="education-school">
+                  Noble School falna, Rajasthan
+                </p>
+                <p className="education-year">Completed: 2022</p>
+                <p className="education-stream">
+                  Stream: PCM (Physics, Chemistry, Mathematics)
+                </p>
+                <p className="education-percentage">Percentage: 76.20%</p>
+              </div>
+              {/* Add more education items as needed */}
+            </div>
             <div className="education-details">
               <div className="education-item">
                 <h3 className="education-degree">
