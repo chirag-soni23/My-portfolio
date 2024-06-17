@@ -1,0 +1,121 @@
+.robot {
+    position: fixed;
+    bottom: 2%;
+    left: 95%; 
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000; 
+    transition: left 0.3s ease; 
+}
+
+
+.robot img {
+    width: 80px; 
+    height: auto; 
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.robot:hover::after {
+    content: "How can I assist today?";
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 100px;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .robot {
+        left: 5%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .robot {
+        bottom: 5%;
+    }
+    
+    .robot img {
+        width: 60px; 
+
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .robot {
+        bottom: 10px; 
+
+    }
+    
+    .robot img {
+        width: 40px;
+    }
+}
+
+.robot-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-image {
+    cursor: pointer;
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+.robot-container {
+    position: relative;
+}
+
+.robot-image {
+    cursor: pointer;
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+
+.robot-container {
+    position: relative;
+}
+
+.robot-image {
+    cursor: pointer;
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+.chatbot-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    height: 60vh;
+    max-height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white; /* Ensure it has a background */
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90%;
+        height: 50vh; /* Adjust for smaller screens */
+    }
+}
