@@ -45,7 +45,7 @@ const Home = () => {
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 20%",
-            end: "bottom 50%",
+            end: "bottom 60%",
             // markers:true,
             toggleActions: "play none none reverse",
           },
