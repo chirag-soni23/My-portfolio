@@ -1,0 +1,9 @@
+{
+    "routes": [
+      { "src": "/(about|projects|contact)?", "dest": "/index.html" },
+      { "src": "/static/(.*)", "dest": "/static/$1" }
+    ],
+    "rewrites": [],
+    "cleanUrls": true
+  }
+  
