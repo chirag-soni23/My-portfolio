@@ -46,7 +46,7 @@ const Home = () => {
             trigger: titleRef.current,
             start: "top 20%",
             end: "bottom 50%",
-            markers:true,
+            // markers:true,
             toggleActions: "play none none reverse",
           },
         }
