@@ -1,21 +1,7 @@
 {
     "routes": [
-        {
-            "src":"/",
-            "dest":"/"
-        },
-        {
-            "src":"/about",
-            "dest":"/"
-        },
-        {
-            "src":"/projects",
-            "dest":"/"
-        },
-        {
-            "src":"/contact",
-            "dest":"/"
-        }
+      { "handle": "filesystem" },
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
   
