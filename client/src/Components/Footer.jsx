@@ -5,7 +5,6 @@ import "../Stylesheet/Footer.css";
 
 const Footer = () => {
   const location = useLocation();
-
   // Check if the current path is '/contact'
   const isContactPage = location.pathname === "/contact";
 
