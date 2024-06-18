@@ -8,10 +8,9 @@ const Footer = () => {
 
   // Check if the current path is '/contact'
   const isContactPage = location.pathname === "/contact";
-  const isErrorPage = location.pathname === "/*";
 
   return (
-    <footer className={`footer ${isContactPage || isErrorPage ? "fixed-bottom" : ""}`}>
+    <footer className={`footer ${isContactPage ? "fixed-bottom" : ""}`}>
       <div className="footer-container">
         <div className="social-links">
           <a
