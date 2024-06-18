@@ -1,12 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "../Stylesheet/Footer.css";
 
-const Footer = () => {
-  const location = useLocation();
-  // Check if the current path is '/contact'
-  const isContactPage = location.pathname === "/contact";
+const Footer = ({ path }) => {
+  const isContactPage = path === "/contact";
 
   return (
     <footer className={`footer ${isContactPage ? "fixed-bottom" : ""}`}>
