@@ -9,7 +9,6 @@ function Layout() {
     <>
       <Navbar />
       <Outlet />
-      {/* <Robot/> */}
       <Footer />
     </>
   );
