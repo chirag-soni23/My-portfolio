@@ -7,4 +7,3 @@
       { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
-  
