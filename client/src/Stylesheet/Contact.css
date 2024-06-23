@@ -2,6 +2,21 @@
     background-color: #f8f8f8;
     padding: 80px 0;
   }
+
+
+  /* loader spinner */
+  .contact-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; 
+  }
+  
+  .contact-form button img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+  }
   
   .contact-container {
     max-width: 800px;

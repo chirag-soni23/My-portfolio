@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../Stylesheet/Contact.css";
 import swal from "sweetalert";
 
+import loadingSpinner from "../assets/Loading/loading.webp";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -37,7 +39,6 @@ const Contact = () => {
       }
     } catch (error) {
       swal("Oops!", "Failed to Send message", "error");
-      setFormData({ name: "", email: "", message: "" });
       console.error("Error:", error);
     } finally {
       setLoading(false);
@@ -72,16 +73,21 @@ const Contact = () => {
 
             <label htmlFor="message">Your Message:</label>
             <textarea
-            rows={4}
-            cols={50}
+              rows={4}
+              cols={50}
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send Message"}
+
+            <button type="submit" disabled={loading} className="submit-button">
+              {loading ? (
+                <img src={loadingSpinner} alt="Loading..." />
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </div>
