@@ -3,10 +3,9 @@ import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "../Stylesheet/Footer.css";
 
 const Footer = ({path}) => {
-  
-
+  const route = path == "/contact"
   return (
-    <footer className={`footer ${path ? "fixed-bottom":""}`}>
+    <footer className={`footer ${route ? "fixed-bottom":""}`}>
       <div className="footer-container">
         <div className="social-links">
           <a
