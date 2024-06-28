@@ -57,7 +57,8 @@ const Home = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = ResumePDF;
-    link.download = "Resume.pdf";
+    // link.download = "Resume.pdf";
+    link.download = "r.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
