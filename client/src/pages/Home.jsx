@@ -3,7 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Stylesheet/Home.css";
 import { mySkills, project } from "../Components/Constant";
-import ResumePDF from "../resume/Resume.pdf";
+// import ResumePDF from "../resume/Resume.pdf";
+import ResumePDF from "../resume/r.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
