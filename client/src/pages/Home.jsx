@@ -3,8 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Stylesheet/Home.css";
 import { mySkills, project } from "../Components/Constant";
-// import ResumePDF from "../resume/Resume.pdf";
-import ResumePDF from "../resume/r.pdf";
+import ResumePDF from "../resume/Resume.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,8 +57,7 @@ const Home = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = ResumePDF;
-    // link.download = "Resume.pdf";
-    link.download = "r.pdf";
+    link.download = "Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
